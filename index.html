@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<head lang="pt-br">
+    <meta name = "viewport" content="device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href=" ./assets/css/styletext.css">
+    <link rel="stylesheet" type="text/css" href=" ./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href=" ./assets/css/bootstrap.css">
+    
+
+    <title>Simulador Quântico da Universidade Federal Fluminense</title>
+<meta charset="uft-8">
+</head>
+<header class="navbar-css">
+  <nav class="navbar navbar-expand-lg navbar-dark" id= "nav">
+      <a class="logo" href="#"><img src="./assets/img/logo.png" width="100%"></a>
+      <button class="navbar-toggler"  data-toggle="collapse" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation" id='dropdownMenuButton'>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav" id="menu">
+          <li class= "nav-item" onclick="this.className='nav-item active' ">
+            <a class="nav-link text-light" href="#">Documentação <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Tutoriais</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Quem Somos</a>
+          </li>
+        </ul>
+        <ul class="redes-sociais">
+          <a class="git" href="https://github.com/Camila-Ferr/Simulador"> <img src="./assets/img/git.png" width="20%">
+          </a>
+          <a>
+            <div class = "busca">
+              <input placeholder="Busca" type="text"/>
+            </div>
+          </a>
+        </ul>
+      </div>
+    </nav>
+          
+</header>
+
+<body>
+  <div class="corpo">
+    <div class=" menu-v flex-column flex-shrink-0 p-3 text-li bg-light" style="width: 280px; height: 100vh;">
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto", id='menuV'>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-dark">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="preparando_ambiente"/></svg>
+              Preparando o Ambiente
+            </a>
+          </li>
+          <a href="#" class="nav-link text-dark">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="primeiros_passos"/></svg>
+              Primeiros Passos
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-dark">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+              Portas Quânticas
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-dark">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+              Criando um Circuito
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-dark">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+              Permutações
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-dark">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+              Traduções
+            </a>
+          </li>
+        </ul>
+        <hr class="final">
+      </div>
+      
+    <div class= "conteudo">
+        <div class = "text">
+          <div class="preparando_ambiente">
+            <h1>Preparando o ambiente</h1>
+            <h2> Baixando o simulador: </h2>
+            <p>  </p>
+          </div>
+            <div class="primeiros_passos">
+                <h1> Primeiros Passos</h1>
+                <h2>Passo 1: Inicializando um programa </h2>
+                <p> A primeira linha de programa do simulador necessita conter a palvra reservada <i>'Program'</i>  seguida do número de qbits, 
+                e o número de vezes que é desejado executar o circuito, nessa ordem, como no exemplo abaixo: </p>
+                <div class="codigo">Program 5 100</div>
+                <p> O QuanticIC ainda se apresenta limitado quanto ao número de qbits, realizando circuitos com, no máximo, 6 ou 7 qbits.</p>
+                <h2> Passo 2: Conhecendo as portas Quânticas</h2>
+            </div>
+            <div class="portas_quanticas">
+                <p> Agora é só montar o circuito. Abaixo, temos uma tabela com os comandos utilizados para as portas disponíveis :</p>
+                <div class = 'subtitle'>Portas para 1 qbit:</div>
+                <table class="table table-border">
+                  <thead>
+                    <tr>
+                      <th scope="col">Porta:</th>
+                      <th scope="col">Comando:</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Pauli_X (Not) </td>
+                      <td>x(qbit-alvo)</td>
+                    </tr>
+                    <tr>
+                      <td>Pauli_Y </td>
+                      <td>y(qbit-alvo)</td>
+                    </tr>
+                    <tr>
+                      <td>Pauli_Z</td>
+                      <td>z(qbit-alvo)</td>
+                    </tr>
+                    <tr>
+                      <td>Hadamard (H)</td>
+                      <td>h(qbit-alvo)</td>
+                    </tr>
+                    <tr>
+                      <td> T(&prod;/8)</td>
+                      <td>t(qbit-alvo)</td>
+                    </tr>
+                    <tr>
+                      <td> Phase(S,P)</td>
+                      <td>s(qbit-alvo)</td>
+                  </tr>
+
+
+                  </tbody>
+                </table>
+            </div>
+          </div>
+        </div> 
+  </div>
+ <!-- <script type="text/javascript" src="./assets/js/main.js"></script> -->
+</body> 
+</html>

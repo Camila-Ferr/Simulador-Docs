@@ -1,0 +1,38 @@
+ .text{
+    width: 80%;
+    float: left;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+h1{
+    display: block;
+    font-size: 2em !important;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold !important;
+}
+h2{
+    display: block;
+    font-size: 1.5em !important;
+}
+
+.codigo{
+    color: rgba(255, 255, 255, 0.774);
+    background-color: rgba(24, 20, 20, 0.986);
+    padding: 15px;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: rgba(0,1,1,2.2) 0px 1px 3px;
+}
+
+.subtitle{
+    font-size: 20px;
+    font-style: italic;
+}
+
+.table td{ 
+    text-align: center;
+}
