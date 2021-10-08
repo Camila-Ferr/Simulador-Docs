@@ -31,6 +31,17 @@
 .final{
     display: none;
 }
+
+.menu-v .active{
+    background-color: rgb(240, 227, 209)!important;
+    font-style: italic;
+}
+
+.none{
+    display: none;
+}
+
+
 @media(max-width: 600px){
     
     .menu-v{
