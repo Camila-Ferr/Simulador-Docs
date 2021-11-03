@@ -56,8 +56,8 @@
             </a>
           </li>
           <li class="nav-item">
-          <a href="#" class="nav-link text-dark" onclick="active(id2)" id= 'id2'>
-              <svg class="bi me-2" width="16" height="16"><use xlink:href="primeiros_passos"/></svg>
+          <a href="./index.html.primeiros_passos" class="nav-link text-dark" onclick="active(id2)" id= 'id2'>
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#"/></svg>
               Primeiros Passos
             </a>
           </li>
@@ -82,7 +82,7 @@
           <li>
             <a href="#" class="nav-link text-dark" onclick="active(id6)" id= 'id6'>
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-              Traduções
+              Tradução
             </a>
           </li>
         </ul>
@@ -94,38 +94,72 @@
           <div class="preparando_ambiente">
             <h1>Preparando o ambiente</h1>
             <h2> Baixando o simulador: </h2>
-            <p>  </p>
+            <h3> Pré-requisitos :</h3>
+            <ul class="pre_requisito">
+              <li>Python na versão 3.8 ou superior.</li>
+              <li> Bibliotecas Math e Simpy instaladas.</li>
+            </ul>
+            <p>  Para uso do simulador, é necessário instalá-lo localmente. Para isso, será necessário clonar o repositório do projeto no github. </p>
+            <li>Para Windows</li>
+              <div class="caixa">
+                <h3> Opção 1 </h3>
+                <p> Recomendamos instalar o <a href=https://desktop.github.com> GitHub para Desktop</a></p>
+                <h3> Opção 2</h3>
+                <p> 1- Instale o <a href="https://gitforwindows.org/">Terminal para Git no Windows</a></p>
+                <p> 2 - Após a instalação, abra o projeto do Simulador no <a href="https://github.com/Camila-Ferr/Simulador"> Git</a> e clique na opção "Code"</p>
+                <p> 3- Copie o url </p>
+                <p> 4- Clique com o botão esquerdo na tela principal do computador e escolha a opção "git bash here" para abrir o terminal.</p>
+                <p> 5- No terminal, digite "git clone" e cole o link copiado. </p>
+              </div>
+              <li class="margin">Para ArchLinux ou MacOS:</li>
+              <div class="caixa">
+                <p> 1- Abra o simulador e selecione a opção "Code"</p>
+                <p> 2- Copie o url</p>
+                <p> 3 - Abra o terminal no Desktop</p>
+                <p> 4- Digite "git clone" no terminal e cole o url copiado.</p>
+              </div>
+              <p>Abra a pasta que foi criada com o projeto e o arquivo.txt presente na pasta.</p>
           </div>
+
             <div class="primeiros_passos">
                 <h1> Primeiros Passos</h1>
-                <h2>Passo 1: Inicializando um programa </h2>
-                <p> A primeira linha de programa do simulador necessita conter a palvra reservada <i>'Program'</i>  seguida do número de qbits, 
-                e o número de vezes que é desejado executar o circuito, nessa ordem, como no exemplo abaixo: </p>
-                <div class="codigo">Program 5 100</div>
-                <p> O QuanticIC ainda se apresenta limitado quanto ao número de qbits, realizando circuitos com, no máximo, 6 ou 7 qbits.</p>
-                <h2> Passo 2: Conhecendo as portas Quânticas</h2>
+                <h2>Compreendendo a estrutura dos códigos </h2>
+                <p> A primeira linha no arquivo txt necessita conter a palvra reservada <i>'Program'</i>  seguida do número de qbits, 
+                e o número de vezes que é desejado executar o circuito. O QuanticIC ainda apresenta-se limitado quanto ao número de qbits, realizando circuitos com, 
+                no máximo, 6 ou 7 qbits. As próximas linhas deverão ser as portas envolvidas no circuito. </p>
+                <p> Para finalizar o código, é necessário que o comando <i>'Medir([])</i>seja indicado, com os qbits na ordem de sua medição entre as chaves.</p> 
+                <p>Abaixo está apresentado um modelo simples da estrutura: </p>
+                <div class="caixa"><p>Program 5 100</p>
+                <div class= "comentario"><p>\\Operadores</p> </div>
+                <p> Medir ([4,3,2,1,0])</p>
+                </div>
+                <div class="exemplo">No exemplo, é iniciado um programa com 5 qbits (do q-bit 0 ao q-bit 4) e será executado 100 vezes.</div>
             </div>
             <div class="portas_quanticas">
-                <p> Agora é só montar o circuito. Abaixo, temos uma tabela com os comandos utilizados para as portas disponíveis :</p>
-                <div class = 'subtitle'>Portas para 1 qbit:</div>
+              <h2> Conhecendo as portas Quânticas</h2>
+                <p> Agora é só montar o circuito. Abaixo, temos uma tabela com os comandos utilizados para as portas disponíveis.</p>
+                </div>
                 <table class="table table-border">
                   <thead>
                     <tr>
                       <th scope="col">Porta:</th>
                       <th scope="col">Comando:</th>
+                      <th scope="col">Funcionamento </th>
                     </tr>
                   </thead>
                   <tbody>
+                    <div class="portas_para_1_bit"><a name="portas_para_1_bit"></a>
                     <tr>
-                      <td>Pauli_X (Not) </td>
+                      <td id= "classica">Pauli x (Not) </td>
                       <td>x(qbit-alvo)</td>
+                      <td></td>
                     </tr>
                     <tr>
-                      <td>Pauli_Y </td>
+                      <td>Pauli y </td>
                       <td>y(qbit-alvo)</td>
                     </tr>
                     <tr>
-                      <td>Pauli_Z</td>
+                      <td>Pauli z</td>
                       <td>z(qbit-alvo)</td>
                     </tr>
                     <tr>
@@ -140,14 +174,185 @@
                       <td> Phase(S,P)</td>
                       <td>s(qbit-alvo)</td>
                   </tr>
-
-
+                  <tr>
+                    <td>Shor Gate</td>
+                    <td>sdg (qbit-alvo)</td>
+                  </tr>
+                  <tr>
+                    <td>Dagger Gate</td>
+                    <td>tgd (qbit-alvo)</td>
+                  </tr>
+                  <tr>
+                    <td>U1</td>
+                    <td>u1 (&lambda;, qbit-alvo)</td>
+                  </tr>
+                  <tr>
+                    <td>U2</td>
+                    <td>u2 (&phi;, &lambda;, qbit-alvo)</td>
+                  </tr>
+                  <tr>
+                    <td>U3</td>
+                    <td>u3 (&theta;, &phi;, &lambda;, qbit-alvo)</td>
+                  </tr>
+                  <tr>
+                    <td>Rx (Rotação em torno do eixo x)</td>
+                    <td>rx (&theta;, qbit-alvo)</td>
+                  </tr>
+                  <tr>
+                    <td>Ry (Rotação em torno do eixo y)</td>
+                    <td>ry (&theta;, qbit-alvo)</td>
+                  </tr>
+                  <tr>
+                    <td>Rz (Rotação em torno do eixo z)</td>
+                    <td>rz (&theta;, qbit-alvo)</td>
+                  </tr>
+                    </div>
+                    <div class="portas_para_2_bits"> <a name="portas_para_2_bits"></a>
+                  <tr>
+                    <td id="classica">CNOT (cx)</td>
+                    <td>cx (qbit-controle, q-bit alvo)</td>
+                  </tr>
+                  <tr>
+                    <td>Hadamard Gate (ch)</td>
+                    <td>ch (qbit-controle)</td>
+                  </tr>
+                  <tr>
+                    <td>Controlled y-gate (cy)</td>
+                    <td>cy (qbit-controle)</td>
+                  </tr>
+                  <tr>
+                    <td>Controlled z-gate (cz)</td>
+                    <td>cz (qbit-controle)</td>
+                  </tr>
+                  <tr>
+                    <td>Controlled s-gate (cz)</td>
+                    <td>cs (qbit-controle)</td>
+                  </tr>
+                  <tr>
+                    <td>Controlled rx-gate (crx)</td>
+                    <td>crx (&theta;, qbit-controle)</td>
+                  </tr>
+                  <tr>
+                    <td>Controlled ry-gate (crx)</td>
+                    <td>cry (&theta;, qbit-controle)</td>
+                  </tr>
+                  <tr>
+                    <td>Controlled rz-gate (crx)</td>
+                    <td>crz (&theta;, qbit-controle)</td>
+                  </tr>
+                  <tr>
+                    <td>Controlled U1-gate (cu1)</td>
+                    <td>cu1 (&theta;, qbit-controle)</td>
+                  </tr>
+                  <tr>
+                    <td>Controlled U3-gate (cu3)</td>
+                    <td>cu3 (&theta;&phi;&lambda;, qbit-controle)</td>
+                  </tr>
+                  <tr>
+                    <td> RXX gate (rxx)</td>
+                    <td>rxx(&theta;, qbit-controle)</td>
+                  </tr>
+                  <tr>
+                    <td>Controlled ZZ-gate (czz)</td>
+                    <td>czz (&theta;, qbit-controle)</td>
+                  </tr>
+                  <tr>
+                    <td>Condicional Phase Shift (cfs)</td>
+                    <td>cu1 (&theta;, qbit-controle)</td>
+                  </tr>
+                  <tr>
+                    <td>Swap gate (swap)</td>
+                    <td>swap (bit1, bit2)</td>
+                  </tr>
+                  </div>
+                  <div class="portas_para_3_bits"><a name="portas_para_3_bits"></a>
+                    <tr>
+                      <td>Toffoli gate (ccx)</td>
+                      <td>ccx (qbit-controle1, qbit-controle2, qbit-alvo)</td>
+                    </tr>
+                    <tr>
+                      <td>Controlled Swap gate (cswap)</td>
+                      <td>cswap (qbit-controle1, qbit-controle2, qbit-alvo)</td>
+                    </tr>
+                  </div>  
                   </tbody>
                 </table>
+                <div class="construindo_circuito">
+                  <h1> Escrita do circuito</h1> 
+                  <h2>Outro jeito de escrever as portas clássicas</h2>
+                  <p>Um diferencial do projeto é oferecer ao usuário um novo jeito de escrever toda as portas clássicas do circuito: 
+                    realizando uma permutação de estados através da palavra reservada <i>perm</i>. </p>
+                  <div class="caixa">
+                    perm (0,2, [4,1,2,3])
+                  </div>
+                  <div class="exemplo"> Nesse exemplo, foi pedido uma permutação com 0 como o q-bit inicial e envolvendo 2 bits.</div>
+                  <p> Como já mostrado, a porta Not inverte as amplitudes dos bits, modificando o estado 1 para o estado 0 e vice-versa. 
+                    Assim, a permutação equivalente a x(0) é:</p>
+                  <div class="caixa">
+                    perm (0,1, [1,0])
+                  </div>
+                  <p> Essa possibilidade ocorre pois uma porta clássica modifica, apenas, a amplitude dos bits envolvidos no circuito. </p>
+                  <p>Escrever toda a parte clássica do código dessa forma traz grandes benefícios na otimização, pois o que era descrito por uma matriz bidimensional
+                    passa ser descrito como uma matriz unidimensional, reduzindo o tempo de execução do circuito. Também é vantajoso para algorítmos maiores, comoo o de Shor, como demonstrado abaixo:
+                  </p>
+                  <div class="caixa"> perm(0,6,[4, 1, 2, 3, 28, 0, 8, 12, 16, 9, 10, 11, 52, 13, 14, 15, 5, 20, 24, 32, 29, 21, 22, 23, 17, 25, 26, 27, 53, 36, 40, 44, 6, 33, 34, 35, 30, 37, 38, 39, 18,41, 42, 43, 54, 45, 46, 47, 7, 49, 50, 51, 31, 48, 56, 60, 19, 57, 58, 59, 55, 61, 62, 63])</div>
+                  <div class="exemplo"> Parte clássica utilizada na fatoração do número 15. </div>
+                  <h2> Escrita por matrizes </h2>
+                  <p> O simulador apresenta a opção de escrever todas as portas do circuito pela matriz correspondente. Por meio de um operador genérico com a escrita
+                    do q-bit em que a matriz será aplicada, o número de q-bits envolvidos no processo e a sua matriz.</p>
+                    <div class="caixa">
+                      gen_op(1, 2, ([1,0,0,0],[0,1,0,0],[0,0,0,1],[0,0,1,0]))
+                    </div>
+                    <div class="exemplo">No exemplo, temos a porta CNOT aplicada no q_bit 1.</div>
+                    <h2> Obtenção do resultado em matrizes</h2>
+                    <p> Todas as operações podem ser descritas como matrizes operadoras, como visto acima. Isso implica que a saída do circuito pode ser descrita por uma matriz 
+                      resultante. E para tal, o código apresenta a funcionalidade do booleano <i>Matrix= True</i> na primeira linha de código. 
+                    </p>
+                    <div class="caixa"> Program 5  100 Matrix= True </div>
+                </div>
+
+                <div class=" traducoes">
+                  <h1>Tradução</h1>
+                  <p> Nos estudos motivacionais para esse simulador, utilizamos como base os simuladores disponíveis para o usuário pela IBM: QASM e Qiskit. Logo, 
+                    pensando na facilidade proposta ao usuário e reconhecimento dessas linguagens para a pesquisa na área da quântica, o QuanticIC interpreta códigos escritos em 
+                    QASM ou Qiskit, apresentando como saída apenas o resultado do circuitos. 
+                  </p>
+                  <p> Para a leitura do código, é necessário que a primeira linha seja a indicação da linguagem.
+                    Abaixo, teremos o número de registradores clássicos e quânticos envolvidos no circuito, e em seguida, os operadores envolvidos no processo. O código 
+                    será rodado 100 vezes quando escrito em outra linguagem e apresentará seus resultados em vetores de estados. </p>
+                  <div class="caixa">
+                    <p>Qiskit</p> 
+                    <div>q = QuantumRegister(5, 'qubit')</div> 
+                    <div>c = ClassicalRegister(5, 'bit') </div>
+                    <div>cir = QuantumCircuit(q, c)</div>
+                    <div class="comentario">// Operadores</div>
+                    <div>cir.measure(q[4], c[4])</div>
+                    <div>cir.measure(q[3], c[3])</div>
+                    <div>cir.measure(q[2], c[2])</div>
+                    <div>cir.measure(q[1], c[1])</div>
+                    <div>cir.measure(q[0], c[0])</div>
+                  </div>
+                  <div class="exemplo">A estrutura do código foi inicializada com 5 q-bits e finalizado com as medições.</div>
+                  <p> Para a criação de um arquivo texto com uma linguagem diferente da entrada, deve-se escrever o código e adicionar o símbolo reservado <i>*</i> ao final 
+                  do código. Os códigos podem ser traduzidos para as linguagens de pesquisa base: QASM e Qiskit ou para a linguagem do QuanticIC utilizando a palavra <i>self</i>.</p>
+                  <div class="caixa">
+                    <p>Qiskit</p> 
+                    <div>q = QuantumRegister(5, 'qubit')</div> 
+                    <div>c = ClassicalRegister(5, 'bit') </div>
+                    <div>cir = QuantumCircuit(q, c)</div>
+                    <div class="comentario">// Operadores</div>
+                    <div>cir.measure(q[4], c[4])</div>
+                    <div>cir.measure(q[3], c[3])</div>
+                    <div>cir.measure(q[2], c[2])</div>
+                    <div>cir.measure(q[1], c[1])</div>
+                    <div>cir.measure(q[0], c[0])</div>
+                    <div> *self</div>
+                  </div>
+                  <div class="exemplo"> No comando da última linha, será criado um novo arquivo texto com o código traduzido para a linguagem própria do simulador.</div>
+                  </div>
             </div>
           </div>
         </div> 
-  </div>
 <script type="text/javascript" src="./assets/js/main.js"></script> 
 </body> 
 </html>

@@ -33,7 +33,7 @@
 }
 
 .menu-v .active{
-    background-color: rgb(240, 227, 209)!important;
+    background-color: rgba(19, 0, 0, 0.068)!important;
     font-style: italic;
 }
 
